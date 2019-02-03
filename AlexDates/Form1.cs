@@ -139,6 +139,9 @@ namespace AlexDates
                 m_ComboBoxes[i - 1] = comb;
                 comb.row = i - 1;
 
+                //Add ComboBox Handler.
+                comb.SelectedIndexChanged += new EventHandler(this.ComboBoxIndexChanged);
+
 
 
                 //Go through each column.
@@ -149,6 +152,7 @@ namespace AlexDates
                     MyTextBox textBox = new MyTextBox();
                     textBox.Size      = new Size(150, textBox.Size.Height);
                     textBox.Font      = new Font("Arial", 8, FontStyle.Bold);
+                    textBox.CharacterCasing = CharacterCasing.Upper;
                     dates_table_layout.Controls.Add(textBox, j, i);
 
                     //Add Event Handlers.
@@ -170,6 +174,19 @@ namespace AlexDates
 
 
 
+        private void ComboBoxIndexChanged(object sender, EventArgs e)
+        {
+            MyComboBox combo = (MyComboBox)sender;
+
+            //If the event is Enabled.
+            if (!combo.event_disabled)
+            {
+                bool success = AddDate(combo.row);
+
+                if (success)
+                    SubmitedTextChanged(m_textBoxes[combo.row, 0]);
+            }
+        }
 
 
         //CheckBox Event.
@@ -180,11 +197,15 @@ namespace AlexDates
             //If the event is not disabled.
             if (!txt.disable_event)
             {
-                AddDate(txt.row);
+                bool success = AddDate(txt.row);
+
+                if (success)
+                    SubmitedTextChanged(m_textBoxes[txt.row, 0]);
 
                 m_textBoxes[txt.row, 0].Enabled = !txt.Checked;
                 m_textBoxes[txt.row, 1].Enabled = !txt.Checked;
                 m_textBoxes[txt.row, 2].Enabled = !txt.Checked;
+                m_ComboBoxes[txt.row].Enabled   = !txt.Checked;
             }
 
             else
@@ -192,6 +213,7 @@ namespace AlexDates
                 m_textBoxes[txt.row, 0].Enabled = !txt.Checked;
                 m_textBoxes[txt.row, 1].Enabled = !txt.Checked;
                 m_textBoxes[txt.row, 2].Enabled = !txt.Checked;
+                m_ComboBoxes[txt.row].Enabled   = !txt.Checked;
             }
         }
 
@@ -1504,12 +1526,16 @@ namespace AlexDates
         private void dates_next_btn_Click(object sender, EventArgs e)
         {
             dates_date_picker.Value = dates_date_picker.Value.AddDays(1);
+
+            UpdateDatesInfo();
         }
 
         //Dates Previous Button Clicked.
         private void dates_prev_btn_Click(object sender, EventArgs e)
         {
             dates_date_picker.Value = dates_date_picker.Value.AddDays(-1);
+
+            UpdateDatesInfo();
         }
 
 
@@ -1531,7 +1557,9 @@ namespace AlexDates
                 m_textBoxes[row, 1].Clear();
                 m_textBoxes[row, 2].Clear();
 
-                m_ComboBoxes[row].SelectedIndex = -1;
+                m_ComboBoxes[row].event_disabled = true;
+                m_ComboBoxes[row].SelectedIndex  = -1;
+                m_ComboBoxes[row].event_disabled = false;
 
                 m_Checkboxes[row].disable_event = true;
                 m_Checkboxes[row].Checked       = false;
@@ -1569,7 +1597,9 @@ namespace AlexDates
                         m_textBoxes[appoint.row, 2].ForeColor = Color.Green;
 
                         //Load the service chooser.
-                        m_ComboBoxes[appoint.row].SelectedItem = appoint.service;
+                        m_ComboBoxes[appoint.row].event_disabled = true;
+                        m_ComboBoxes[appoint.row].SelectedItem   = appoint.service;
+                        m_ComboBoxes[appoint.row].event_disabled = false;
 
                         //Load the payment checkbox.
                         m_Checkboxes[appoint.row].disable_event = true;

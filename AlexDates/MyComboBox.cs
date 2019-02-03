@@ -10,5 +10,6 @@ namespace AlexDates
     class MyComboBox : ComboBox
     {
         public int row;
+        public bool event_disabled = false;
     }
 }

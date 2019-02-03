@@ -311,7 +311,7 @@
             this.insert_client_disc_entry.Multiline = true;
             this.insert_client_disc_entry.Name = "insert_client_disc_entry";
             this.insert_client_disc_entry.Size = new System.Drawing.Size(209, 119);
-            this.insert_client_disc_entry.TabIndex = 8;
+            this.insert_client_disc_entry.TabIndex = 9;
             // 
             // groupBox13
             // 
@@ -385,6 +385,7 @@
             // 
             // insert_client_lname_search_entry
             // 
+            this.insert_client_lname_search_entry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.insert_client_lname_search_entry.Location = new System.Drawing.Point(79, 52);
             this.insert_client_lname_search_entry.MaxLength = 20;
             this.insert_client_lname_search_entry.Name = "insert_client_lname_search_entry";
@@ -420,11 +421,12 @@
             // 
             // insert_client_lname_entry
             // 
+            this.insert_client_lname_entry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.insert_client_lname_entry.Location = new System.Drawing.Point(70, 42);
             this.insert_client_lname_entry.MaxLength = 20;
             this.insert_client_lname_entry.Name = "insert_client_lname_entry";
             this.insert_client_lname_entry.Size = new System.Drawing.Size(182, 20);
-            this.insert_client_lname_entry.TabIndex = 7;
+            this.insert_client_lname_entry.TabIndex = 6;
             // 
             // insert_client_phone_entry
             // 
@@ -432,7 +434,7 @@
             this.insert_client_phone_entry.MaxLength = 10;
             this.insert_client_phone_entry.Name = "insert_client_phone_entry";
             this.insert_client_phone_entry.Size = new System.Drawing.Size(182, 20);
-            this.insert_client_phone_entry.TabIndex = 6;
+            this.insert_client_phone_entry.TabIndex = 8;
             // 
             // label11
             // 
@@ -449,7 +451,7 @@
             this.insert_client_email_entry.MaxLength = 255;
             this.insert_client_email_entry.Name = "insert_client_email_entry";
             this.insert_client_email_entry.Size = new System.Drawing.Size(182, 20);
-            this.insert_client_email_entry.TabIndex = 4;
+            this.insert_client_email_entry.TabIndex = 7;
             // 
             // label12
             // 
@@ -471,11 +473,12 @@
             // 
             // insert_clientname_entry
             // 
+            this.insert_clientname_entry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.insert_clientname_entry.Location = new System.Drawing.Point(70, 20);
             this.insert_clientname_entry.MaxLength = 20;
             this.insert_clientname_entry.Name = "insert_clientname_entry";
             this.insert_clientname_entry.Size = new System.Drawing.Size(182, 20);
-            this.insert_clientname_entry.TabIndex = 0;
+            this.insert_clientname_entry.TabIndex = 5;
             // 
             // groupBox11
             // 
@@ -534,7 +537,7 @@
             this.insert_client_button.Location = new System.Drawing.Point(270, 194);
             this.insert_client_button.Name = "insert_client_button";
             this.insert_client_button.Size = new System.Drawing.Size(494, 36);
-            this.insert_client_button.TabIndex = 1;
+            this.insert_client_button.TabIndex = 10;
             this.insert_client_button.Text = "Εισαγωγή Πελάτη";
             this.insert_client_button.UseVisualStyleBackColor = true;
             this.insert_client_button.Click += new System.EventHandler(this.insert_client_button_Click);
@@ -612,7 +615,7 @@
             this.insert_stuff_button.Location = new System.Drawing.Point(270, 201);
             this.insert_stuff_button.Name = "insert_stuff_button";
             this.insert_stuff_button.Size = new System.Drawing.Size(494, 36);
-            this.insert_stuff_button.TabIndex = 1;
+            this.insert_stuff_button.TabIndex = 4;
             this.insert_stuff_button.Text = "Εισαγωγή Εργαζομένου";
             this.insert_stuff_button.UseVisualStyleBackColor = true;
             this.insert_stuff_button.Click += new System.EventHandler(this.insert_stuff_button_Click);
@@ -649,7 +652,7 @@
             this.insert_stuff_lname.MaxLength = 20;
             this.insert_stuff_lname.Name = "insert_stuff_lname";
             this.insert_stuff_lname.Size = new System.Drawing.Size(182, 20);
-            this.insert_stuff_lname.TabIndex = 7;
+            this.insert_stuff_lname.TabIndex = 1;
             // 
             // insert_stuff_phone
             // 
@@ -657,7 +660,7 @@
             this.insert_stuff_phone.MaxLength = 10;
             this.insert_stuff_phone.Name = "insert_stuff_phone";
             this.insert_stuff_phone.Size = new System.Drawing.Size(182, 20);
-            this.insert_stuff_phone.TabIndex = 6;
+            this.insert_stuff_phone.TabIndex = 3;
             // 
             // label8
             // 
@@ -674,7 +677,7 @@
             this.insert_stuff_email.MaxLength = 255;
             this.insert_stuff_email.Name = "insert_stuff_email";
             this.insert_stuff_email.Size = new System.Drawing.Size(182, 20);
-            this.insert_stuff_email.TabIndex = 4;
+            this.insert_stuff_email.TabIndex = 2;
             // 
             // label7
             // 
@@ -799,7 +802,7 @@
             this.insert_service_button.Location = new System.Drawing.Point(270, 153);
             this.insert_service_button.Name = "insert_service_button";
             this.insert_service_button.Size = new System.Drawing.Size(494, 36);
-            this.insert_service_button.TabIndex = 1;
+            this.insert_service_button.TabIndex = 13;
             this.insert_service_button.Text = "Εισαγωγή Υπηρεσίας";
             this.insert_service_button.UseVisualStyleBackColor = true;
             this.insert_service_button.Click += new System.EventHandler(this.insert_service_button_Click);
@@ -828,7 +831,7 @@
             0});
             this.insert_service_price_entry.Name = "insert_service_price_entry";
             this.insert_service_price_entry.Size = new System.Drawing.Size(172, 20);
-            this.insert_service_price_entry.TabIndex = 4;
+            this.insert_service_price_entry.TabIndex = 12;
             // 
             // label6
             // 
@@ -854,7 +857,7 @@
             this.insert_service_name_entry.MaxLength = 20;
             this.insert_service_name_entry.Name = "insert_service_name_entry";
             this.insert_service_name_entry.Size = new System.Drawing.Size(172, 20);
-            this.insert_service_name_entry.TabIndex = 0;
+            this.insert_service_name_entry.TabIndex = 11;
             // 
             // groupBox9
             // 
@@ -1554,6 +1557,7 @@
             // 
             // bonus_lnam_search_entry
             // 
+            this.bonus_lnam_search_entry.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.bonus_lnam_search_entry.Enabled = false;
             this.bonus_lnam_search_entry.Location = new System.Drawing.Point(70, 67);
             this.bonus_lnam_search_entry.MaxLength = 20;
