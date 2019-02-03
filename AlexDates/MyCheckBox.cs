@@ -10,5 +10,6 @@ namespace AlexDates
     class MyCheckBox : CheckBox
     {
         public int row;
+        public bool disable_event = false;
     }
 }
